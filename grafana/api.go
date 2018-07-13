@@ -160,6 +160,9 @@ func (g client) getPanelURL(p Panel, dashName string, t TimeRange) string {
 	if p.IsSingleStat() {
 		values.Add("width", "300")
 		values.Add("height", "150")
+	}else if p.isText(){
+		values.Add("width","1000")
+		values.Add("height", "50")
 	} else {
 		values.Add("width", "1000")
 		values.Add("height", "500")
