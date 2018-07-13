@@ -112,6 +112,13 @@ func (p Panel) IsSingleStat() bool {
 	return false
 }
 
+func (p Panel) isText() bool{
+	if p.Type=="text"{
+		return true
+	}
+	return false
+}
+
 func (r Row) IsVisible() bool {
 	return r.Showtitle
 }
